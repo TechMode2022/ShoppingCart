@@ -13,4 +13,8 @@ share(){
   window.alert('The product has been successfully shared');
 } 
 
+onNotify(){
+  window.alert("You will be notified when the product goes on sale");
+}
+
 }

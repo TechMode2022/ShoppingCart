@@ -13,6 +13,11 @@
     </p>
 
     <button type="button" (click)="share()">Share</button>
+
+    <app-product-alerts
+        [Inoutp1] = "product"
+        (notiFy) = "onNotify()">
+    </app-product-alerts>
 </div>
 
 
