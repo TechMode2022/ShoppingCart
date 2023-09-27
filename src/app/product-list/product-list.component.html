@@ -1,0 +1,22 @@
+<h2>Proucts</h2>
+<div *ngFor="let product of prodlist">
+    <!-- <h3>{{product.name}}</h3> -->
+
+    <h3>
+        <a [routerLink]="product.name + 'details'">
+            {{product.name}}
+        </a>
+    </h3>
+
+    <p *ngIf="product.description">
+        Description: {{product.description}}
+    </p>
+
+    <button type="button" (click)="share()">Share</button>
+</div>
+
+
+<!-- get the list of products make it clickable and show the details of that clicked product -->
+
+
+
