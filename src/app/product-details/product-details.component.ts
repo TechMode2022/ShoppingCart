@@ -18,6 +18,5 @@ export class ProductDetailsComponent implements OnInit {
 
     this.ProdDetail = products.find(p => p.id === productIdFromRoute);
 
-    window.alert(this.ProdDetail)
   }
 }
