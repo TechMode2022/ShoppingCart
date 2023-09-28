@@ -1,0 +1,12 @@
+<a [routerLink]="['/']">
+    <h1>My Store</h1>
+  </a>
+  <div style="display: flex;justify-content: space-between;gap:1rem">
+    <a [routerLink]="['/cart']" class="button fancy-button">
+      Checkout
+    </a>
+  
+    <button class="button fancy-button" (click)="onRemoveCartClick()">Make Cart Empty</button>
+  </div>
+  
+  

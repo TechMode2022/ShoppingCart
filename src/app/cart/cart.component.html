@@ -1,0 +1,36 @@
+<p>cart works!</p>
+<!-- <button (click)="RemoveItems()">Make Cart Empty</button> -->
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+
+  <button class="button" type="submit">Purchase</button>
+
+</form>
+
+<div class="cart-item" *ngFor="let item of items">
+    <span>{{ item.name }}</span>
+    <span>{{ item.price | currency }}</span>
+    <button type="" (click)="RemoveProduct(item.id)">Remove Items</button>
+</div>
+
+  <div *ngIf="isCartEmpty">Cart is Empty</div>
+
+  
